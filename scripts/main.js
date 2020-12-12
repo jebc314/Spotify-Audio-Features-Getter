@@ -1,5 +1,5 @@
 var spotifyApi = new SpotifyWebApi();
-spotifyApi.setAccessToken('BQA-ZImBrGLXGfUQuG_zQisNKPcCtCBy2Aj-LtLaiH7kK6jDEd8sNHclKBAn-YRwtnzjf_0qwkZFIgL2S0nLKYb7anfQaeO2yyKBGF5u9eiqtn4qtR-hfkaZTzR0GNK7I3aSP6s');
+spotifyApi.setAccessToken('BQBHYe_cDT0TqrPrRt0ULGkgnk9BOkjM7tw6aswS4hPCn0TiTNxusRakhq_rcp44pfUf8RpI58GdMmO6xv2QbHlonzyk3z30dUpup2LbW3SmJQfaZWR6uerzMJ-eMzdWwtExz9A');
 
 function search() {
     var form = document.getElementById("form");
