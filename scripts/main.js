@@ -31,3 +31,18 @@ function search() {
         );
     });
 }
+
+function myFunction() {
+    console.log();
+    (async () => {
+        await faceapi.nets.ssdMobilenetv1.loadFromUri('/models');
+        
+        var c = document.getElementById("canvas");
+        c.drawImage(video, 0, 0, 640, 480);
+
+        const image = document.querySelector('img');
+        image.src = canvas.toDataURL();
+        const canvas = faceapi.createCanvasFromMedia(image);
+        const detection = await faceapi.detectAllFaces(image);
+    })();
+}
