@@ -35,7 +35,7 @@ function search() {
 function myFunction() {
     console.log();
     (async () => {
-        await faceapi.nets.ssdMobilenetv1.loadFromUri('/models');
+        await faceapi.nets.ssdMobilenetv1.loadFromUri('../models');
         
         var c = document.getElementById("canvas");
         c.drawImage(video, 0, 0, 640, 480);
