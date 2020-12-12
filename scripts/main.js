@@ -14,9 +14,20 @@ function search() {
             track_id = data.tracks.items[0].id;
             console.log(track_id);
             p_songid.innerHTML = track_id;
+            return track_id;
         },
         function (err) {
             console.error(err);
         }
-    )
+    ).then(function (track_id) {
+        spotifyApi.getAudioFeaturesForTrack(track_id).then(
+            function (data) {
+                console.log(text+" track  features", data);
+                p_songid.innerHTML = JSON.stringify(data, null, 2);
+            },
+            function (err) {
+                console.error(err);
+            }
+        );
+    });
 }
