@@ -1,8 +1,8 @@
 var spotifyApi = new SpotifyWebApi();
-spotifyApi.setAccessToken('BQBHYe_cDT0TqrPrRt0ULGkgnk9BOkjM7tw6aswS4hPCn0TiTNxusRakhq_rcp44pfUf8RpI58GdMmO6xv2QbHlonzyk3z30dUpup2LbW3SmJQfaZWR6uerzMJ-eMzdWwtExz9A');
+spotifyApi.setAccessToken('BQDa6PMUE6Rr7Id-lJFXcIwADUvhNy6vnlyjqfVUmSxZn31CpE0Ec8S2f5p5kfX2R7C6gFP06oeTiApr2YAFZkRj2i0ZYEGDS3R0zYxoJQB_kv3oWlNQC2UTYmZS2gXGgxyRpe8');
 
 function search() {
-    spotifyApi.setAccessToken('BQBHYe_cDT0TqrPrRt0ULGkgnk9BOkjM7tw6aswS4hPCn0TiTNxusRakhq_rcp44pfUf8RpI58GdMmO6xv2QbHlonzyk3z30dUpup2LbW3SmJQfaZWR6uerzMJ-eMzdWwtExz9A');
+    spotifyApi.setAccessToken('BQDa6PMUE6Rr7Id-lJFXcIwADUvhNy6vnlyjqfVUmSxZn31CpE0Ec8S2f5p5kfX2R7C6gFP06oeTiApr2YAFZkRj2i0ZYEGDS3R0zYxoJQB_kv3oWlNQC2UTYmZS2gXGgxyRpe8');
     var form = document.getElementById("form");
     var text = form.elements[0].value;
     console.log(text);
