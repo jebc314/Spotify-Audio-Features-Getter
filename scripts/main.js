@@ -55,10 +55,11 @@ function search() {
 
 var track_ids = [];
 
-function open() {
+function open_play_list() {
     spotifyApi.setAccessToken(access_token);
     var form = document.getElementById("form2");
     var text = form.elements[0].value;
+    console.log(text);
     text = text.split("playlist/")[1];
     text = text.split("?")[0];
 
