@@ -16,27 +16,6 @@
         <input type="button" onclick="search()" value="Submit">
     </form>
     <p id="song_id"></p>
-    <!-- For video-->
-    <video id="video" width="640" height="480" autoplay></video>
-    
-    <canvas id="canvas" width="640" height="480"></canvas>
-    <img></img>
-    
-    <button type = "button" onclick="myFunction()">Click me!</button>
-    <script>
-        // Grab elements, create settings, etc.
-        var video = document.getElementById('video');
-
-        // Get access to the camera!
-        if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-            // Not adding `{ audio: true }` since we only want video now
-            navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
-                //video.src = window.URL.createObjectURL(stream);
-                video.srcObject = stream;
-                video.play();
-            });
-        }
-    </script>
 
 </body>
 </html>

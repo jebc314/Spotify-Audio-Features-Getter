@@ -1,8 +1,26 @@
+var callback_url = window.location.href;
+const api_url = "https://accounts.spotify.com/authorize?client_id=603a3368045e46f7ac6e93eae3b95595&response_type=token&redirect_uri="+callback_url;
+var access_token;
+var hash;
+if(!window.location.hash){
+    window.location.replace(api_url);
+}else{
+    var url = window.location.href;
+    hash = url.split('#')[1];
+    hash = hash.split('&')[0];
+    hash = hash.split('=')[1];
+}
+
+// ...
+// ...
+
 var spotifyApi = new SpotifyWebApi();
-spotifyApi.setAccessToken('BQDa6PMUE6Rr7Id-lJFXcIwADUvhNy6vnlyjqfVUmSxZn31CpE0Ec8S2f5p5kfX2R7C6gFP06oeTiApr2YAFZkRj2i0ZYEGDS3R0zYxoJQB_kv3oWlNQC2UTYmZS2gXGgxyRpe8');
+access_token = hash;
+spotifyApi.setAccessToken(access_token);
+
 
 function search() {
-    spotifyApi.setAccessToken('BQDa6PMUE6Rr7Id-lJFXcIwADUvhNy6vnlyjqfVUmSxZn31CpE0Ec8S2f5p5kfX2R7C6gFP06oeTiApr2YAFZkRj2i0ZYEGDS3R0zYxoJQB_kv3oWlNQC2UTYmZS2gXGgxyRpe8');
+    spotifyApi.setAccessToken(access_token);
     var form = document.getElementById("form");
     var text = form.elements[0].value;
     console.log(text);
@@ -11,7 +29,7 @@ function search() {
     spotifyApi.searchTracks(text).then(
         function (data) {
             console.log(text+" track data", data);
-            track_id = data.tracks.items[0].id;
+            var track_id = data.tracks.items[0].id;
             console.log(track_id);
             p_songid.innerHTML = track_id;
             return track_id;
@@ -30,19 +48,4 @@ function search() {
             }
         );
     });
-}
-
-function myFunction() {
-    console.log();
-    (async () => {
-        await faceapi.nets.ssdMobilenetv1.loadFromUri('../models');
-        
-        var c = document.getElementById("canvas");
-        c.drawImage(video, 0, 0, 640, 480);
-
-        const image = document.querySelector('img');
-        image.src = canvas.toDataURL();
-        const canvas = faceapi.createCanvasFromMedia(image);
-        const detection = await faceapi.detectAllFaces(image);
-    })();
 }
