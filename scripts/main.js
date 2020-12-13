@@ -18,7 +18,7 @@ window.onload = function() {
           // Cancel the default action, if needed
           event.preventDefault();
           // Trigger the button element with a click
-          document.getElementById("button1").click();
+          document.getElementById("submit1").click();
         }
       });
     input2.addEventListener("keypress", function(event) {
@@ -36,7 +36,7 @@ window.onload = function() {
           // Cancel the default action, if needed
           event.preventDefault();
           // Trigger the button element with a click
-          document.getElementById("button2").click();
+          document.getElementById("submit2").click();
         }
       });
 }
