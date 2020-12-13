@@ -14,7 +14,7 @@ window.onload = function() {
         }
 
         // Number 13 is the "Enter" key on the keyboard
-        if (code === 13) {
+        if (code == "Enter" || code === 13) {
           // Cancel the default action, if needed
           event.preventDefault();
           // Trigger the button element with a click
@@ -32,7 +32,7 @@ window.onload = function() {
         }
 
         // Number 13 is the "Enter" key on the keyboard
-        if (code === 13) {
+        if (code == "Enter" || code === 13) {
           // Cancel the default action, if needed
           event.preventDefault();
           // Trigger the button element with a click
