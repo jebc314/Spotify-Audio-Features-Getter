@@ -83,6 +83,7 @@ function open_playlist() {
                 function (d) {
                     output_string += JSON.stringify(d, null, 2) + "<br>";
                     output_paragraph.innerHTML = output_string;
+                    setTimeout(() => {  console.log("World!"); }, 10);
                 },
                 function (err) {
                     console.error(err);
