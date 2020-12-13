@@ -24,6 +24,10 @@ function search() {
     var form = document.getElementById("form");
     var text = form.elements[0].value;
     console.log(text);
+    
+    var music_player = document.getElementById("music_player");
+    music_player.src = "https://open.spotify.com/embed/track/"+text;
+
     var p_songid = document.getElementById("song_id");
 
     spotifyApi.searchTracks(text).then(
