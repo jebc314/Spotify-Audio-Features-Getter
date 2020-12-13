@@ -82,7 +82,7 @@ function open_playlist() {
             spotifyApi.getAudioFeaturesForTrack(track_items[i].track.id).then(
                 function (d) {
                     output_string += JSON.stringify(d, null, 2) + "<br>";
-                    output_paragraph.innerHTML(output_paragraph);
+                    output_paragraph.innerHTML = output_string;
                 },
                 function (err) {
                     console.error(err);
