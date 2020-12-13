@@ -52,3 +52,25 @@ function search() {
         );
     });
 }
+
+var track_ids = [];
+
+function open() {
+    spotifyApi.setAccessToken(access_token);
+    var form = document.getElementById("form2");
+    var text = form.elements[0].value;
+    text = text.split("playlist/")[1];
+    text = text.split("?")[0];
+
+    var playlist = document.getElementById("playlist");
+    playlist.src = "https://open.spotify.com/embed/playlist/" + text
+    spotifyApi.getPlaylist(text).then(
+        function (data) {
+            console.log(data);
+        },
+        function (err) {
+            console.error(err);
+        }
+    );
+
+}
