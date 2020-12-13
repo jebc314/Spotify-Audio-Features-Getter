@@ -24,9 +24,6 @@ function search() {
     var form = document.getElementById("form");
     var text = form.elements[0].value;
     console.log(text);
-    
-    var music_player = document.getElementById("music_player");
-    music_player.src = "https://open.spotify.com/embed/track/"+text;
 
     var p_songid = document.getElementById("song_id");
 
@@ -36,6 +33,8 @@ function search() {
             var track_id = data.tracks.items[0].id;
             console.log(track_id);
             p_songid.innerHTML = track_id;
+            var music_player = document.getElementById("music_player");
+            music_player.src = "https://open.spotify.com/embed/track/"+text;
             return track_id;
         },
         function (err) {
