@@ -39,6 +39,20 @@ window.onload = function() {
           document.getElementById("submit2").click();
         }
       });
+      var callback_url = window.location.href;
+      const api_url = "https://accounts.spotify.com/authorize?client_id=603a3368045e46f7ac6e93eae3b95595&response_type=token&redirect_uri="+callback_url;
+      var access_token;
+      var hash;
+      if(!window.location.hash){
+          window.location.replace(api_url);
+      }else{
+          var url = window.location.href;
+          hash = url.split('#')[1];
+          hash = hash.split('&')[0];
+          hash = hash.split('=')[1];
+      }
+      access_token = hash;
+      spotifyApi.setAccessToken(access_token);
 }
 
 function search() {
