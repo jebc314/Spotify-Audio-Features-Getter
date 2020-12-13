@@ -1,5 +1,45 @@
 var spotifyApi = new SpotifyWebApi();
 
+window.onload = function() {
+    var input = document.getElementById("button1");
+    var input2 = document.getElementById("button2");
+    input.addEventListener("keyup", function(event) {
+        var code;
+        if (event.key !== undefined) {
+            code = event.key;
+        } else if (event.keyIdentifier !== undefined) {
+            code = event.keyIdentifier;
+        } else if (event.keyCode !== undefined) {
+            code = event.keyCode;
+        }
+
+        // Number 13 is the "Enter" key on the keyboard
+        if (code === 13) {
+          // Cancel the default action, if needed
+          event.preventDefault();
+          // Trigger the button element with a click
+          input.click();
+        }
+      });
+    input2.addEventListener("keyup", function(event) {
+        var code;
+        if (event.key !== undefined) {
+            code = event.key;
+        } else if (event.keyIdentifier !== undefined) {
+            code = event.keyIdentifier;
+        } else if (event.keyCode !== undefined) {
+            code = event.keyCode;
+        }
+
+        // Number 13 is the "Enter" key on the keyboard
+        if (code === 13) {
+          // Cancel the default action, if needed
+          event.preventDefault();
+          // Trigger the button element with a click
+          input2.click();
+        }
+      });
+}
 
 function search() {
     var callback_url = window.location.href;
