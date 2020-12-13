@@ -68,7 +68,7 @@ function search() {
             console.log(text+" track data", data);
             var track_id = data.tracks.items[0].id;
             console.log(track_id);
-            p_songid.innerHTML = track_id;
+            //p_songid.innerHTML = track_id;
             var music_player = document.getElementById("music_player");
             music_player.src = "https://open.spotify.com/embed/track/"+track_id;
             return track_id;
