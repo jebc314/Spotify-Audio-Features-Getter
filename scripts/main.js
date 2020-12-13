@@ -76,19 +76,19 @@ function open_playlist() {
     ).then(function (data) {
         var track_items = data.tracks.items;
         var output_string = "";
+        var output_paragraph = document.getElementById("playlist_output");
         for (let i = 0; i < 100; i++)
         {
             spotifyApi.getAudioFeaturesForTrack(track_items[i].track.id).then(
                 function (d) {
-                    output_string += JSON.stringify(d, null, 2) + "/n";
+                    output_string += JSON.stringify(d, null, 2) + "<br>";
+                    output_paragraph.innerHTML(output_paragraph);
                 },
                 function (err) {
                     console.error(err);
                 }
             );
         }
-        var output_paragraph = document.getElementById(playlist_output);
-        output_paragraph.innerHTML(output_paragraph);
     });
 
 }
