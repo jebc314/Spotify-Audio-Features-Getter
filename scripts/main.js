@@ -3,7 +3,7 @@ var spotifyApi = new SpotifyWebApi();
 window.onload = function() {
     var input = document.getElementById("form").elements[0];
     var input2 = document.getElementById("form2").elements[0];
-    input.addEventListener("keyup", function(event) {
+    input.addEventListener("keypress", function(event) {
         var code;
         if (event.key !== undefined) {
             code = event.key;
@@ -21,7 +21,7 @@ window.onload = function() {
           document.getElementById("button1").click();
         }
       });
-    input2.addEventListener("keyup", function(event) {
+    input2.addEventListener("keypress", function(event) {
         var code;
         if (event.key !== undefined) {
             code = event.key;
