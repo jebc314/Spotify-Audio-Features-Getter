@@ -1,8 +1,8 @@
 var spotifyApi = new SpotifyWebApi();
 
 window.onload = function() {
-    var input = document.getElementById("button1");
-    var input2 = document.getElementById("button2");
+    var input = document.getElementById("form").elements[0];
+    var input2 = document.getElementById("form2").elements[0];
     input.addEventListener("keyup", function(event) {
         var code;
         if (event.key !== undefined) {
@@ -18,7 +18,7 @@ window.onload = function() {
           // Cancel the default action, if needed
           event.preventDefault();
           // Trigger the button element with a click
-          input.click();
+          document.getElementById("button1").click();
         }
       });
     input2.addEventListener("keyup", function(event) {
@@ -36,7 +36,7 @@ window.onload = function() {
           // Cancel the default action, if needed
           event.preventDefault();
           // Trigger the button element with a click
-          input2.click();
+          document.getElementById("button2").click();
         }
       });
 }
